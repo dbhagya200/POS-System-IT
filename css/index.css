@@ -17,3 +17,18 @@ section {
     object-fit: cover;
     margin-right: 10px;
 }
+
+#homeSection{
+  border-radius: 10px;
+  background-color: rgb(181, 185, 185);
+  margin: 0 40px 40px 40px;
+}
+
+.nav-item{
+  margin-left: 20px;
+}
+.card-header{
+  
+      font-family: "DM Serif Text", serif;
+
+}
