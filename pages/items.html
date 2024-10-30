@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/items.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Kaisei+Decol:wght@400;500;700&family=Stoke:wght@300;400&family=Teko:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <title>Item</title>
+</head>
+<body class="bg-secondary" >
+    <section id="navSection">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <a class="navbar-brand homeNav text-light" href=""><img src="/img/logo.jpg" alt=""> POS System</a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ml-auto bg-dark">
+                    <li class="nav-item">
+                        <a class="nav-link homeNav text-light pr-4" id="" href="/index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light pr-4" id="customerNav" href="/pages/customer.html"><i class="fas fa-users"></i>
+                            Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light pr-4" id="itemNav" href="/pages/items.html"><i class="fas fa-boxes"></i> Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light " id="placeorderNav" href="/pages/Orders.html"><i class="fas fa-shopping-cart"></i> Place
+                            Order</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+    </section>
+    
+    <section id="itemSection" style="margin-top: 90px;" >
+        <div class="container mt-4">
+            <h2><i class="fa-solid fa-box-open mt-4 "></i> Item Management</h2>
+            <form class="mt-4">
+                <div class="form-group">
+                    <label for="itemCode"><i class="fas fa-barcode "></i> Item Code:</label>
+                    <input type="text" class="form-control mb-4 " id="itemCode" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemName"><i class="fas fa-tag"></i> Item Name:</label>
+                    <input type="text" class="form-control mb-4" id="itemName" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemUnitPrice"><i class="fas fa-dollar-sign"></i> Item Unit Price:</label>
+                    <input type="text" class="form-control mb-4" id="itemUnitPrice" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemQuantity"><i class="fas fa-sort-numeric-up"></i> Item Quantity:</label>
+                    <input type="text" class="form-control mb-4" id="itemQuantity" required>
+                </div>
+                <button type="button" class="btn btn-primary" id="saveBtn">
+                    <i class="fas fa-save"></i> Save
+                </button>
+                <button type="button" class="btn btn-secondary" id="searchBtn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+                <button type="button" class="btn btn-danger" id="deleteBtn">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
+                <button type="button" class="btn btn-info" id="updateBtn">
+                    <i class="fas fa-edit"></i> clear
+                </button>
+                <button type="button" class="btn btn-warning" id="updateBtn">
+                    <i class="fas fa-edit"></i> Update
+                </button>
+                <button type="button" class="btn-outline-success"  id="getAllBtn">
+                    <i class="fas fa-edit"></i> GetAll
+                </button>
+            </form>
+    
+            <div class="container mt-4">
+                <h2 class="mb-4"><i class="fa-solid fa-box-open mt-2 "></i> Item Details</h2>
+                <table class="table bg-light table-responsive-md table-bordered table-secondary">
+                    <thead>
+                    <tr class="bg-secondary">
+                        <th><i class="fas fa-barcode"></i> Item Code</th>
+                        <th><i class="fas fa-tag"></i> Item Name</th>
+                        <th><i class="fas fa-dollar-sign"></i> Item Unit Price</th>
+                        <th><i class="fas fa-sort-numeric-up"></i> Item Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody id="itemTableBody">
+                    <tr >
+                        <td>ABC123</td>
+                        <td>Sample Item</td>
+                        <td></i> 10.99</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>DEF456</td>
+                        <td>Another Item</td>
+                        <td>8.50</td>
+                        <td>2</td>
+                    </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+    
+    </section>
+          
+    
+          
+    
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+          <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"
+        ></script>
+</body>
+</html>
